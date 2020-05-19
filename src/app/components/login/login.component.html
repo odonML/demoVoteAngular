@@ -1,0 +1,22 @@
+<div class="row mt-2">
+    <h4 class="col-lg-10">login</h4><button type="button" class="btn btn-success col-lg-2" routerLink="registro">Crear Cuenta</button>
+</div>
+<div class="container">
+    <div class="row justify-content-md-center"> 
+        <div class="col-lg-6">
+            <form class="" #userForm="ngForm" (ngSubmit)="signInWithEmail(userForm)">
+              <div class="form-row">
+                      <div class="form-group col-lg-12">
+                        <label for="">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email"aria-describedby="emailHelp" placeholder="Email">
+                      </div>
+                      <div class="form-group col-lg-12">
+                        <label for="">Contraseña:</label>
+                        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password"aria-describedby="emailHelp" placeholder="password">
+                      </div>
+                    <button type="submit" class="btn btn-primary col-lg-6">Submit</button>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

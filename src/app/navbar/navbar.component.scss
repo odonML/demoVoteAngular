@@ -1,0 +1,19 @@
+.navbar-brand{
+    margin-right: 80%;
+}
+nav a, ul li a  {
+    color: white;
+}
+nav a.navbar-brand:hover{
+    color: white;
+    font-size: 22px;
+    transition: 0.2s;
+}
+nav ul li:hover{
+    background: white;
+    color: #68328C;
+    transition: 0.2s;
+}
+.morado{
+    background-color: #68328C;
+}

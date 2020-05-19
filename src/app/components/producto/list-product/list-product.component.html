@@ -1,0 +1,25 @@
+<div class="row mt-2">
+    <h4 class="col-lg-10">Productos</h4><button type="button" class="btn btn-success col-lg-2" routerLink="/addProduct" *ngIf="authService.Admin()">Agregar Producto</button>
+</div>
+<div class="row">
+    <div class="col-lg-3 mb-3" *ngFor="let product of productList">
+        <div class="card" style="width: 18rem;">
+            <img [src]="product.foto" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Nombre: {{ product.titulo}}</h5>
+              <h6>Descripcion: {{ product.descripcion }} <br> Categoria: {{ product.categoria }}</h6>
+              <p class="card-text">Existentes: {{ product.cantidad }} - Precio: ${{ product.precio }}</p>
+              <a [routerLink]="['/detail/', product.$key]" class="btn btn-primary" *ngIf="authService.Admin()">Detalle</a>
+              
+              
+             
+              
+            
+
+              
+              <a (click)="starVote(product)" class="btn btn-primary" >Detalle</a>
+            </div>
+          </div>
+          
+    </div>
+</div>

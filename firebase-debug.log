@@ -1,0 +1,72 @@
+[debug] [2020-03-20T03:49:03.139Z] ----------------------------------------------------------------------
+[debug] [2020-03-20T03:49:03.143Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\odon_\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-03-20T03:49:03.143Z] CLI Version:   7.15.1
+[debug] [2020-03-20T03:49:03.143Z] Platform:      win32
+[debug] [2020-03-20T03:49:03.143Z] Node Version:  v10.16.0
+[debug] [2020-03-20T03:49:03.147Z] Time:          Thu Mar 19 2020 21:49:03 GMT-0600 (GMT-06:00)
+[debug] [2020-03-20T03:49:03.147Z] ----------------------------------------------------------------------
+[debug] [2020-03-20T03:49:03.147Z] 
+[debug] [2020-03-20T03:49:03.171Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-20T03:49:03.171Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\odon_\Escritorio\angular\crud\my-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project.
+[debug] [2020-03-20T03:50:33.924Z] ----------------------------------------------------------------------
+[debug] [2020-03-20T03:50:33.928Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\odon_\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-03-20T03:50:33.928Z] CLI Version:   7.15.1
+[debug] [2020-03-20T03:50:33.928Z] Platform:      win32
+[debug] [2020-03-20T03:50:33.928Z] Node Version:  v10.16.0
+[debug] [2020-03-20T03:50:33.932Z] Time:          Thu Mar 19 2020 21:50:33 GMT-0600 (GMT-06:00)
+[debug] [2020-03-20T03:50:33.932Z] ----------------------------------------------------------------------
+[debug] [2020-03-20T03:50:33.932Z] 
+[debug] [2020-03-20T03:50:33.944Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-20T03:50:33.948Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\odon_\Escritorio\angular\crud\my-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-03-20T03:50:48.719Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-03-20T03:50:48.719Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-20T03:50:49.343Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-20T03:50:49.355Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-03-20T03:50:50.243Z] <<< HTTP RESPONSE 200
+[info] i  Using project crud-angular-firebase-6a02f (crud-angular-firebase)
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

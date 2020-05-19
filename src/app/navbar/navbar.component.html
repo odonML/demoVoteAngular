@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-light morado ">
+    <a class="navbar-brand" routerLink="">Demo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="authService.isLoggedIn()" routerLink="listProduct">Productos</a>
+        </li>
+        
+        <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" (click)="logout()"><i class="fas fa-sign-out-alt"></i>SALIR</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
