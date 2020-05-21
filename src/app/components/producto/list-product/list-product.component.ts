@@ -19,6 +19,7 @@ import { Star } from 'src/app/models/star';
   styleUrls: ['./list-product.component.scss']
 })
 export class ListProductComponent implements OnInit {
+
   productList:Producto[];
   productObject: Producto;
 
@@ -36,22 +37,7 @@ export class ListProductComponent implements OnInit {
   ngOnInit() {
      this.getProducts();
   }
-
-
-  starHandler(value){
-    console.log(value);
-  }
-  starVote(productkey:Producto, value:number, star:Star=new Star){
-
-
-    console.log(productkey);
-    this.userDetail = this.authService.getLoggedInUser();
-
-      star.productKey=productkey.$key;
-      star.userKey=this.userDetail.$key;;
-      star.value=value;
-      this.starData.addStar(JSON.parse(JSON.stringify(star)));
-  }
+  
 
   getProducts(){
     const x = this.data.getProducto();

@@ -109,7 +109,7 @@ export class AuthService {
       this.userDetails = user;
       if (user != null) {
         loggedUser.$key=this.userObject["$key"];
-
+        loggedUser.nombre=this.userObject["nombre"];
       }
     } else {
       this.userDetails = null;

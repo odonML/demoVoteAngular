@@ -10,10 +10,7 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { InfoComponent } from './components/info/info.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ContactComponent } from './components/contact/contact.component';
 //PRODUCTO
 import { ListProductComponent } from './components/producto/list-product/list-product.component';
 import { AddProductComponent } from './components/producto/add-product/add-product.component';
@@ -25,25 +22,28 @@ import { StarReviewComponent } from './components/star-review/star-review.compon
 
 
 //Star
-
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { StarComponent } from './components/star-review/star/star.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 //import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    InfoComponent,
     NavbarComponent,
-    ContactComponent,
     ListProductComponent,
     AddProductComponent,
     DetailProductComponent,
     LoginComponent,
     RegistroComponent,
-    StarReviewComponent
+    StarReviewComponent,
+    StarComponent,
+    DashboardComponent
   ],
   imports: [
     //star
+    NgbPaginationModule, 
+    NgbAlertModule,
     
     BrowserModule,
     AppRoutingModule,

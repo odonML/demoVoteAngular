@@ -9,15 +9,9 @@
               <h5 class="card-title">Nombre: {{ product.titulo}}</h5>
               <h6>Descripcion: {{ product.descripcion }} <br> Categoria: {{ product.categoria }}</h6>
               <p class="card-text">Existentes: {{ product.cantidad }} - Precio: ${{ product.precio }}</p>
-              <a [routerLink]="['/detail/', product.$key]" class="btn btn-primary" *ngIf="authService.Admin()">Detalle</a>
+              <a [routerLink]="['/detail/', product.$key]" class="btn btn-primary" *ngIf="authService.Admin()">Editar</a>
               
-              
-             
-              
-            
-
-              
-              <a (click)="starVote(product)" class="btn btn-primary" >Detalle</a>
+              <a  [routerLink]="['/voto/', product.$key]"  *ngIf="!authService.Admin()" class="btn btn-primary" >Caracteristicas</a>
             </div>
           </div>
           

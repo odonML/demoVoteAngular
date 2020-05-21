@@ -13,7 +13,9 @@ export class StarService {
   userDetail: User;
 
   estrellas: AngularFirestoreCollection<Star>;
+
   estrella: AngularFirestoreDocument<Star>;
+
   constructor(
     private db: AngularFirestore,
     private authService: AuthService
@@ -21,30 +23,32 @@ export class StarService {
     
     // Create or update star
     addStar(star:Star){
-      //const starPath = `star/${star.userKey}_${star.productKey}`;
-      //return this.db.doc(starPath).set(star);
-      return this.db.collection('star/').add(star);
-      //console.log(star);
-     
-      // Custom doc ID for relationship
-      
+
+      const starPath = `star/${star.userKey}_${star.productKey}`;
+      console.log("AQUI "+JSON.parse(JSON.stringify(star)))
+      return this.db.doc(starPath).set(star);
   
-      // Set the data, return the promise
-      
-      //return this.db.collection("stars/").add(star);
-      
     }
-    //estrellas de usuario
-    /* getUserStars(userKey) {
-    const starsRef = this.db.collection('stars', ref => ref.where('userKey', '==', userKey) );
-    return starsRef.valueChanges();
+   
+
+  getStars(productKey){
+    this.userDetail = this.authService.getLoggedInUser();
+    
+    this.estrellas = this.db.collection('star/', 
+    ref => ref.where('userKey','==', this.userDetail.$key)
+    .where('productKey','==',productKey));
+
+    console.log("HOLA=-------"+this.estrellas);
+    return this.estrellas;
+    
   }
 
-  //estrellas de peliculas 
-  getMovieStars(productKey) {
-    const starsRef = this.db.collection('stars', ref => ref.where('productKey', '==', productKey) );
-    return starsRef.valueChanges();
-  }*/
-
+  getAllStar(){
+    console.log("se hace la peticion");
+   
+   this.estrellas = this.db.collection('star');
+   return this.estrellas;
+   
+  }
 
 }
