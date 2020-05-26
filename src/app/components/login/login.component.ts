@@ -87,7 +87,14 @@ export class LoginComponent implements OnInit {
 
 			})
 			.catch((err) => {
-				console.log("ERROR : "+err)
+				console.log("ERROR : "+err);
+				Swal.fire({
+					position: 'top-end',
+					icon: 'error',
+					title: 'No Existe Esa Cuenta',
+					showConfirmButton: false,
+					timer: 1000
+				  })
 			});
 	}
     

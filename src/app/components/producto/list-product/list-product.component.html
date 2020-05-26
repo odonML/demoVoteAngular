@@ -1,10 +1,16 @@
 <div class="row mt-2">
-    <h4 class="col-lg-10">Productos</h4><button type="button" class="btn btn-success col-lg-2" routerLink="/addProduct" *ngIf="authService.Admin()">Agregar Producto</button>
+    <h4 class="col-lg-10 col-md-9 col-sm-7 col-7">Productos</h4><button type="button" class="btn btn-success col-lg-2 col-md-3 col-sm-5 col-5" routerLink="/addProduct" *ngIf="authService.Admin()">Agregar Producto</button>
 </div>
-<div class="row">
-    <div class="col-lg-3 mb-3" *ngFor="let product of productList">
-        <div class="card" style="width: 18rem;">
-            <img [src]="product.foto" class="card-img-top" alt="...">
+<div class="row justify-content-md-center">
+
+        <div class="card col-lg-4 col-md-6 col-sm-12" *ngFor="let product of productList">
+          <div class="row no-gutters">
+
+          <div class="col-lg-12 col-md-12 col-sm-6 col-6">
+          <img [src]="product.foto" class="card-img-top col-12" alt="...">
+          </div>
+
+          <div class="col-lg-12 col-md-12 col-sm-6 col-6">
             <div class="card-body">
               <h5 class="card-title">Nombre: {{ product.titulo}}</h5>
               <h6>Descripcion: {{ product.descripcion }} <br> Categoria: {{ product.categoria }}</h6>
@@ -14,6 +20,8 @@
               <a  [routerLink]="['/voto/', product.$key]"  *ngIf="!authService.Admin()" class="btn btn-primary" >Caracteristicas</a>
             </div>
           </div>
-          
+
+
+        </div>
     </div>
 </div>

@@ -31,6 +31,6 @@ export class AddProductComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     })
-    this.router.navigate(['list']);    
+    this.router.navigate(['listProduct']);    
   }
 }
